@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Charlotte's Portfolio</title>
-    <link id="daymode" rel="stylesheet" href="stylesheet.css" />
+    <link id="daymode" rel="stylesheet" href="daymode.css" />
     <link id="nightmode" rel="stylesheet" href="nightmode.css" />
   </head>
   <body>
@@ -18,21 +18,11 @@
       </div>
       <div id="window">window</div>
     </div>
-    <div id="nightmodebutton" onclick="initiate()">Nightmode</div>
-    <div id="daymodebutton">Daymode</div>
+    <div id="nightmodebutton" onclick="switchmode('nightmode.css')">Nightmode</div>
+    <div id="daymodebutton" onclick="switchmode('daymode.css')">Daymode</div>
 
     <script>
-    function swapStyleSheet(sheet) {
-      document.getElementById("nightmode").setAttribute("href", sheet);  
-    }
-
-    function initate() {
-      var style1 = document.getElementById("daymode");
-      var style2 = document.getElementById("nightmode");
-
-      style1.onclick = swapStyleSheet("stylesheet.css");
-      style2.onclick = swapStyleSheet("nightmode.css");
-    }
+    
     </script>
   </body>
 </html>
