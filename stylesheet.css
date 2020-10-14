@@ -40,9 +40,9 @@ body {
   box-shadow: 20px 20px 60px #e2c0d1, -20px -20px 60px #f3dde7;
   color: azure;
   padding: 10px;
-  width: 100%;
+  width: 99%;
   height: 50vh;
-  border: solid #b3a3ab 1px;
+  border: solid #d8b2c5 1px;
 }
 
 #nightmodebutton {
@@ -52,10 +52,21 @@ body {
   right: 10px;
   bottom: 10px;
   cursor: pointer;
+  display: block;
 }
 
 #nightmodebutton:hover {
   color: rgb(167, 214, 245);
+}
+
+#daymodebutton {
+  color: rgb(0, 0, 0);
+  font-size: 1vw;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+  display: none;
 }
 
 @font-face {
