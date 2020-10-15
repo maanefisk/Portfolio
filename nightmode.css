@@ -5,9 +5,6 @@
 body {
   margin: 0;
   background: #000000;
-  background: -webkit-radial-gradient(bottom left, #d3c0c9, #f3dde7);
-  background: -moz-radial-gradient(bottom left, #d3c0c9, #f3dde7);
-  background: radial-gradient(to top right, #d3c0c9, #f3dde7);
   background-size: 100% 100vh;
 }
 
@@ -18,19 +15,20 @@ body {
 #panel {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 #panel2 {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: space-between;
 }
 
 #icon {
   font-size: 3vw;
-  color: #ffffff;
+  color: whitesmoke;
   transition: 0.2s;
   height: 3.5vw;
 }
@@ -41,13 +39,12 @@ body {
 }
 
 #window {
-  background: linear-gradient(145deg, #f0d3df, #e2cdd7);
+  background: grey;
   border-radius: 5px;
-  box-shadow: 20px 20px 60px #e2c0d1, -20px -20px 60px #f3dde7;
-  color: azure;
+  color: whitesmoke;
   padding: 10px;
-  width: 0.5em;
-  height: 0.5em;
+  width: 99%;
+  height: 50vh;
   border: solid #d8b2c5 1px;
 }
 

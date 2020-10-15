@@ -4,30 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Charlotte's Portfolio</title>
-    <link id="daymode" rel="stylesheet" href="daymode.css" />
     <link id="nightmode" rel="stylesheet" href="nightmode.css" />
+    <link id="daymode" rel="stylesheet" href="daymode.css" />
+    
   </head>
   <body>
+    <img id="BGimg" src="Colorfuldrip.png">
     <div id="container">
       <div id="panel">
-        <div id="icon">Art</div>
-        <div id="icon">3D</div>
-        <div id="icon">Animation</div>
-        <div id="icon">Code</div>
-        <div id="icon">Contact</div>
+        <div id="icon" onmouseover="generateColorOnHover(this)">Art</div>
+        <div id="icon" onmouseover="generateColorOnHover(this)">3D</div>
+        <div id="icon" onmouseover="generateColorOnHover(this)">Animation</div>
+        <div id="icon" onmouseover="generateColorOnHover(this)">Code</div>
+        <div id="icon" onmouseover="generateColorOnHover(this)">Contact</div>
       </div>
-      <div id="window">window</div>
+      <div id="panel2">
+        <div id="window">window</div>
+        <div id="window">window</div>
+        <div id="window">window</div>
+        <div id="window">window</div>
+        <div id="window">window</div>
+      </div>
+      
     </div>
     <div id="nightmodebutton" onclick="switchmode('/nightmode.css')">Nightmode</div>
     <div id="daymodebutton" onclick="switchmode('daymode.css')">Daymode</div>
 
     <script>
+    var daymodeB = document.getElementById('daymodebutton');
+    var nightmodeB = document.getElementById('nightmodebutton');
+
       function switchmode(sheet) {
         document.getElementById('daymode').setAttribute('href',sheet);
-        console.log(sheet);
+        
+        if (sheet == '/nightmode.css') {
+          nightmodeB.style.display = "none";
+          daymodeB.style.display = "block";
+          } 
+          else { nightmodeB.style.display = "block"; 
+          daymodeB.style.display = "none";}
       }
 
-      
+      function generateColorOnHover(onIcon) {
+        onIcon.style.color = getaColor();
+      }
+
+
+      function getaColor()
+      {
+        //Store available css classes
+        var classes = new Array("green", "White", "teal", "violet", "pink");
+       
+        //Get a random number from 0 to 4
+        // var randomNumber = Math.floor(Math.random()*5);
+
+        for (i=0;i<5;i++) {
+          var randomNumber = i;
+        }
+        
+
+        return classes[randomNumber];
+      }
     
     </script>
   </body>
