@@ -18,10 +18,16 @@
       </div>
       <div id="window">window</div>
     </div>
-    <div id="nightmodebutton" onclick="switchmode('nightmode.css')">Nightmode</div>
+    <div id="nightmodebutton" onclick="switchmode('/nightmode.css')">Nightmode</div>
     <div id="daymodebutton" onclick="switchmode('daymode.css')">Daymode</div>
 
     <script>
+      function switchmode(sheet) {
+        document.getElementById('daymode').setAttribute('href',sheet);
+        console.log(sheet);
+      }
+
+      
     
     </script>
   </body>

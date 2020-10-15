@@ -5,7 +5,7 @@
 body {
   margin: 0;
   background: #000000;
-  background: -webkit-radial-gradient(bottom left, #d3c0c9, #f3dde7);
+  background: -webkit-radial-gradient(bottom left, #63d3ff, #f3dde7);
   background: -moz-radial-gradient(bottom left, #d3c0c9, #f3dde7);
   background: radial-gradient(to top right, #d3c0c9, #f3dde7);
   background-size: 100% 100vh;
