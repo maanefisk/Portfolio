@@ -12,11 +12,11 @@
     <img id="BGimg" src="">
     <div id="container">
       <div id="panel">
-        <div id="icon" onmouseover="generateColorOnHover(this)" onmouseout="originalColor(this)">Art</div>
-        <div id="icon" onmouseover="generateColorOnHover(this)" onmouseout="originalColor(this)">3D</div>
-        <div id="icon" onmouseover="generateColorOnHover(this)" onmouseout="originalColor(this)">Animation</div>
-        <div id="icon" onmouseover="generateColorOnHover(this)" onmouseout="originalColor(this)">Code</div>
-        <div id="icon" onmouseover="generateColorOnHover(this)" onmouseout="originalColor(this)">Contact</div>
+        <div id="icon" onmouseover="generateColorOnHover(this)" onmouseout="backToColor(this)">Art</div>
+        <div id="icon" onmouseover="generateColorOnHover(this)" onmouseout="backToColor(this)">3D</div>
+        <div id="icon" onmouseover="generateColorOnHover(this)" onmouseout="backToColor(this)">Animation</div>
+        <div id="icon" onmouseover="generateColorOnHover(this)" onmouseout="backToColor(this)">Code</div>
+        <div id="icon" onmouseover="generateColorOnHover(this)" onmouseout="backToColor(this)">Contact</div>
       </div>
       <div id="panel2">
         <div id="window">window</div>
@@ -33,26 +33,36 @@
     <script>
     var daymodeB = document.getElementById('daymodebutton');
     var nightmodeB = document.getElementById('nightmodebutton');
+    var counter=0;
+    var icon = document.getElementById('icon');
+    var originalColor = "";
+
+    function backToColor(theIcon) {theIcon.style.color = originalColor;}
 
       function switchmode(sheet) {
         document.getElementById('daymode').setAttribute('href',sheet);
         
         if (sheet == '/nightmode.css') {
+          let originalColor = 'white';
+          icon.style.color = originalColor;
           nightmodeB.style.display = "none";
           daymodeB.style.display = "block";
           } 
-          else { nightmodeB.style.display = "block"; 
-          daymodeB.style.display = "none";}
+          else {
+            let originalColor = 'black';
+            icon.style.color = originalColor;
+            nightmodeB.style.display = "block"; 
+            daymodeB.style.display = "none";}
       }
 
       function generateColorOnHover(onIcon) {
         var classes = new Array("green", "white", "blue", "yellowgreen", "pink");
-        // for (i=0;i<5;i++){onIcon.style.color = classes[i];}
-        console.log(classes[i]);
+        if (counter<=3) counter++; else counter=0;
+        onIcon.style.color = classes[counter];
       }
 
-
-      // function getaColor()
+      
+      // function getaRandomColor()
       // {
       //   //Store available css classes
       //   var classes = new Array("green", "white", "blue", "yellowgreen", "pink");
@@ -63,7 +73,7 @@
       //     return classes[randomNumber];
       // }
 
-      function originalColor(theIcon) {theIcon.style.color = "Black";}
+      
     
     </script>
   </body>
