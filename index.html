@@ -9,14 +9,14 @@
     
   </head>
   <body>
-    <img id="BGimg" src="Colorfuldrip.png">
+    <img id="BGimg" src="">
     <div id="container">
       <div id="panel">
-        <div id="icon" onmouseover="generateColorOnHover(this)">Art</div>
-        <div id="icon" onmouseover="generateColorOnHover(this)">3D</div>
-        <div id="icon" onmouseover="generateColorOnHover(this)">Animation</div>
-        <div id="icon" onmouseover="generateColorOnHover(this)">Code</div>
-        <div id="icon" onmouseover="generateColorOnHover(this)">Contact</div>
+        <div id="icon" onmouseover="generateColorOnHover(this)" onmouseout="originalColor(this)">Art</div>
+        <div id="icon" onmouseover="generateColorOnHover(this)" onmouseout="originalColor(this)">3D</div>
+        <div id="icon" onmouseover="generateColorOnHover(this)" onmouseout="originalColor(this)">Animation</div>
+        <div id="icon" onmouseover="generateColorOnHover(this)" onmouseout="originalColor(this)">Code</div>
+        <div id="icon" onmouseover="generateColorOnHover(this)" onmouseout="originalColor(this)">Contact</div>
       </div>
       <div id="panel2">
         <div id="window">window</div>
@@ -46,25 +46,24 @@
       }
 
       function generateColorOnHover(onIcon) {
-        onIcon.style.color = getaColor();
+        var classes = new Array("green", "white", "blue", "yellowgreen", "pink");
+        // for (i=0;i<5;i++){onIcon.style.color = classes[i];}
+        console.log(classes[i]);
       }
 
 
-      function getaColor()
-      {
-        //Store available css classes
-        var classes = new Array("green", "White", "teal", "violet", "pink");
+      // function getaColor()
+      // {
+      //   //Store available css classes
+      //   var classes = new Array("green", "white", "blue", "yellowgreen", "pink");
        
-        //Get a random number from 0 to 4
-        // var randomNumber = Math.floor(Math.random()*5);
+      //   //Get a random number from 0 to 4
+      //   // var randomNumber = Math.floor(Math.random()*5);
 
-        for (i=0;i<5;i++) {
-          var randomNumber = i;
-        }
-        
+      //     return classes[randomNumber];
+      // }
 
-        return classes[randomNumber];
-      }
+      function originalColor(theIcon) {theIcon.style.color = "Black";}
     
     </script>
   </body>
