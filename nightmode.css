@@ -5,11 +5,12 @@
 body {
   margin: 0;
   background: #000000;
+  background-image: url("Nightmode_BG.png");
   background-size: 100% 100vh;
 }
 
 #container {
-  padding: 100px;
+  padding: 80px 300px 0px 300px;
 }
 
 #panel {

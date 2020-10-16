@@ -9,7 +9,6 @@
     
   </head>
   <body>
-    <img id="BGimg" src="">
     <div id="container">
       <div id="panel">
         <div id="icon" onmouseover="generateColorOnHover(this)" onmouseout="backToColor(this)">Art</div>
@@ -33,9 +32,10 @@
     <script>
     var daymodeB = document.getElementById('daymodebutton');
     var nightmodeB = document.getElementById('nightmodebutton');
-    var counter=0;
+    var BGimg = document.getElementById('BGimg');
     var icon = document.getElementById('icon');
     var originalColor = "";
+    var counter=0;
 
     function backToColor(theIcon) {theIcon.style.color = originalColor;}
 
