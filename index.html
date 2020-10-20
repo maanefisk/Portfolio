@@ -9,7 +9,6 @@
     
   </head>
   <body>
-    <div id="test">FARGE</div>
     <div id="banner">
       <div id="panel">
         <div id="icon" class="art" onmouseover="generateColorOnHover(this)" onmouseout="backToColor(this)">Art</div>
@@ -53,7 +52,7 @@
       }
 
       function generateColorOnHover(onIcon) {
-        var classes = new Array("rgb(231, 254, 255)", "rgb(245, 255, 231)", " rgb(255, 231, 248)", "rgb(235, 231, 255)", "rgb(231, 255, 239)");
+        var classes = new Array("rgb(247, 254, 255)", "rgb(247, 255, 252)", "rgb(247, 252, 255)", "rgb(249, 247, 255)", "rgb(253, 247, 255)");
         if (counter<=3) counter++; else counter=0;
         onIcon.style.color = classes[counter];
       }
