@@ -12,6 +12,14 @@ body {
   background-attachment: fixed;
 }
 
+#test {
+  position: fixed;
+  z-index: 3;
+  margin-left: 30px;
+  font-size: 60px;
+  color: rgb(231, 254, 255);
+}
+
 #banner {
   background-image: url("Splash_banner.png");
   background-size: 100% 100vh;
@@ -37,7 +45,7 @@ body {
   align-self: center;
   font-size: 3vw;
   color: black;
-  transition: 0.2s;
+  transition: 0.4s;
   height: 3.5vw;
   margin-bottom: 62vh;
   transform: rotate(5deg);
@@ -65,20 +73,29 @@ body {
 }
 
 @-webkit-keyframes wobble {
-  0% {
-    transform: rotate(-13deg);
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
   }
-  25% {
-    transform: rotate(13deg);
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
   }
-  45% {
-    transform: rotate(-13deg);
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
   }
-  65% {
-    transform: rotate(13deg);
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
   }
   100% {
-    transform: rotate(-13deg);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
