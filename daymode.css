@@ -6,55 +6,86 @@ body {
   margin: 0;
   margin-top: 5%;
   background: #f1eeec;
-  background-image: url("DaymodeLighter_BG.png");
+  background-image: url("Splash_BG.png");
   background-size: 100% 100vh;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-#container {
-  padding: 10% 20% 0px 20%;
+#banner {
+  background-image: url("Splash_banner.png");
+  background-size: 100% 100vh;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  transition: 0.2s;
+  top: -5%;
 }
 
 #panel {
-  padding: 8px;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-#panel2 {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: space-around;
+  transform: rotate(-5deg);
 }
 
 #icon {
+  align-self: center;
   font-size: 3vw;
   color: black;
   transition: 0.2s;
   height: 3.5vw;
+  margin-bottom: 62vh;
+  transform: rotate(5deg);
+}
+
+#contentbox {
+  background-image: url("Splash_window_white.png");
+  background-size: 100% 100vh;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  left: 0%;
+  bottom: 0%;
 }
 
 #icon:hover {
   font-size: 3.5vw;
   cursor: pointer;
+  animation: wobble 5s infinite;
+  animation-timing-function: ease-in-out;
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff,
+    0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
 }
 
-#window {
-  background: white;
-  border-radius: 5px;
-  color: black;
-  border: solid #d8b2c5 1px;
-  width: 200px;
+@-webkit-keyframes wobble {
+  0% {
+    transform: rotate(-13deg);
+  }
+  25% {
+    transform: rotate(13deg);
+  }
+  45% {
+    transform: rotate(-13deg);
+  }
+  65% {
+    transform: rotate(13deg);
+  }
+  100% {
+    transform: rotate(-13deg);
+  }
 }
 
 #nightmodebutton {
   color: rgb(0, 0, 0);
   font-size: 1vw;
-  position: absolute;
+  position: fixed;
   right: 10px;
   bottom: 10px;
   cursor: pointer;

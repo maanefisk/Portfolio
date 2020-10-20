@@ -9,22 +9,18 @@
     
   </head>
   <body>
-    <div id="container">
+    <div id="banner">
       <div id="panel">
-        <div id="icon" onmouseover="generateColorOnHover(this)" onmouseout="backToColor(this)">Art</div>
-        <div id="icon" onmouseover="generateColorOnHover(this)" onmouseout="backToColor(this)">3D</div>
-        <div id="icon" onmouseover="generateColorOnHover(this)" onmouseout="backToColor(this)">Animation</div>
-        <div id="icon" onmouseover="generateColorOnHover(this)" onmouseout="backToColor(this)">Code</div>
-        <div id="icon" onmouseover="generateColorOnHover(this)" onmouseout="backToColor(this)">Contact</div>
+        <div id="icon" class="art" onmouseover="generateColorOnHover(this)" onmouseout="backToColor(this)">Art</div>
+        <div id="icon" class="threed" onmouseover="generateColorOnHover(this)" onmouseout="backToColor(this)">3D</div>
+        <div id="icon" class="animation" onmouseover="generateColorOnHover(this)" onmouseout="backToColor(this)">Animation</div>
+        <div id="icon" class="code" onmouseover="generateColorOnHover(this)" onmouseout="backToColor(this)">Code</div>
+        <div id="icon" class="contact" onmouseover="generateColorOnHover(this)" onmouseout="backToColor(this)">Contact</div>
       </div>
-      <div id="panel2">
-        <div id="window">window</div>
-        <div id="window">window</div>
-        <div id="window">window</div>
-        <div id="window">window</div>
-        <div id="window">window</div>
-      </div>
-      
+    </div>
+    
+    <div id="contentbox">
+
     </div>
     <div id="nightmodebutton" onclick="switchmode('/nightmode.css')">Nightmode</div>
     <div id="daymodebutton" onclick="switchmode('daymode.css')">Daymode</div>
@@ -56,7 +52,7 @@
       }
 
       function generateColorOnHover(onIcon) {
-        var classes = new Array("green", "white", "blue", "yellowgreen", "pink");
+        var classes = new Array("yellow", "white", "cyan", "yellowgreen", "pink");
         if (counter<=3) counter++; else counter=0;
         onIcon.style.color = classes[counter];
       }
