@@ -1,4 +1,5 @@
 function contactview() {
+    console.log("Category opened: " + model.page);
     document.getElementById('content').innerHTML = `
     <div id="banner">
     <div id="panel">
@@ -13,8 +14,8 @@ function contactview() {
   <div id="contentbox">
   <div id="stuffing">CONTACT </div>
   </div>
-  <div id="nightmodebutton" onclick="switchmode('/nightmode.css')">Nightmode</div>
-  <div id="daymodebutton" onclick="switchmode('daymode.css')">Daymode</div>
+  <div class="night" id="nightmodebutton" onclick="changemode(this)">Nightmode</div>
+  <div class="day" id="daymodebutton" onclick="changemode(this)">Daymode</div>
 
     `;
 }

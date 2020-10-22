@@ -12,29 +12,29 @@ function changepage(theclicked) {
 
 function changemode(theelement) {
     var dayornight = theelement.getAttribute("class");
-    model.page = dayornight;
-    console.log(dayornight);
-    console.log(model.page);
+    model.mode = dayornight;
+    console.log("The element clicked: " + dayornight + " button!");
+    console.log("model.page: "+ model.page);
     updateView();
 }
 
-//'/nightmode.css', 'daymode.css'
+function daytime() {
+    console.log("Daytime function initiated")
+    document.getElementById('daymode').setAttribute('href','daymode.css');
+    let originalColor = 'black';
+    icon.style.color = originalColor;
+    nightmodeB.style.display = "block"; 
+    daymodeB.style.display = "none";
+}
 
-// function daymode() {
-//     document.getElementById('daymode').setAttribute('href','daymode.css');
-//     let originalColor = 'black';
-//     icon.style.color = originalColor;
-//     nightmodeB.style.display = "block"; 
-//     daymodeB.style.display = "none";
-// }
-
-// function nightmode() {
-//     document.getElementById('daymode').setAttribute('href','/nightmode.css');
-//     let originalColor = 'white';
-//     icon.style.color = originalColor;
-//     nightmodeB.style.display = "none";
-//     daymodeB.style.display = "block";
-// }
+function nighttime() {
+    console.log("Nighttime function initiated")
+    document.getElementById('daymode').setAttribute('href','/nightmode.css');
+    let originalColor = 'white';
+    icon.style.color = originalColor;
+    nightmodeB.style.display = "none";
+    daymodeB.style.display = "block";
+}
 
 function backToColor(theIcon) {theIcon.style.color = originalColor;}
 
