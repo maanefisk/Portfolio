@@ -1,8 +1,6 @@
-var icon = document.getElementById('icon');
-var daymodeB = document.getElementById('daymodebutton');
-var nightmodeB = document.getElementById('nightmodebutton');    
-var originalColor = "";
-var counter=0;
+
+let originalColor = "";
+let counter=0;
   
 function changepage(theclicked) {
     var pagename = theclicked.getAttribute("class");
@@ -19,6 +17,9 @@ function changemode(theelement) {
 }
 
 function daytime() {
+    let icon = document.getElementById('icon');
+    let daymodeB = document.getElementById('daymodebutton');
+    let nightmodeB = document.getElementById('nightmodebutton');    
     console.log("Daytime function initiated")
     document.getElementById('daymode').setAttribute('href','daymode.css');
     let originalColor = 'black';
@@ -28,6 +29,9 @@ function daytime() {
 }
 
 function nighttime() {
+    let icon = document.getElementById('icon');
+    let daymodeB = document.getElementById('daymodebutton');
+    let nightmodeB = document.getElementById('nightmodebutton');    
     console.log("Nighttime function initiated")
     document.getElementById('daymode').setAttribute('href','/nightmode.css');
     let originalColor = 'white';
