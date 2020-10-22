@@ -1,0 +1,4 @@
+const model = {
+    page: '',
+    mode: '',
+};
