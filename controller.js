@@ -1,5 +1,3 @@
-
-let originalColor = "";
 let counter=0;
   
 function changepage(theclicked) {
@@ -11,39 +9,27 @@ function changepage(theclicked) {
 function changemode(theelement) {
     var dayornight = theelement.getAttribute("class");
     model.mode = dayornight;
-    console.log("The element clicked: " + dayornight + " button!");
-    console.log("model.page: "+ model.page);
     updateView();
 }
 
 function daytime() {
     let icon = document.getElementById('icon');
-    let daymodeB = document.getElementById('daymodebutton');
-    let nightmodeB = document.getElementById('nightmodebutton');    
-    console.log("Daytime function initiated")
     document.getElementById('daymode').setAttribute('href','daymode.css');
-    let originalColor = 'black';
-    icon.style.color = originalColor;
-    nightmodeB.style.display = "block"; 
-    daymodeB.style.display = "none";
+    model.textmode = 'white'; //If you want to have different colors for different moods.
+    icon.style.color = model.textmode; //--=--
 }
 
 function nighttime() {
     let icon = document.getElementById('icon');
-    let daymodeB = document.getElementById('daymodebutton');
-    let nightmodeB = document.getElementById('nightmodebutton');    
-    console.log("Nighttime function initiated")
     document.getElementById('daymode').setAttribute('href','/nightmode.css');
-    let originalColor = 'white';
-    icon.style.color = originalColor;
-    nightmodeB.style.display = "none";
-    daymodeB.style.display = "block";
+    model.textmode = 'white'; //If you want to have different colors for different moods.
+    icon.style.color = model.textmode; //--=--
 }
 
-function backToColor(theIcon) {theIcon.style.color = originalColor;}
+function backToColor(theIcon) {theIcon.style.color = model.textmode;}
 
 function generateColorOnHover(onIcon) {
-  var classes = new Array("rgb(247, 254, 255)", "rgb(247, 255, 252)", "rgb(247, 252, 255)", "rgb(249, 247, 255)", "rgb(253, 247, 255)");
+  var classes = new Array("rgb(247, 254, 255)", "rgb(247, 255, 252)", "rgb(247, 252, 255)", "rgb(249, 247, 255)", "rgb(253, 247, 255)"); //This is for making the color shift when hover. Strong colors would make more sense here. But nice to have * + .
   if (counter<=3) counter++; else counter=0;
   onIcon.style.color = classes[counter];
 }

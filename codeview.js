@@ -1,5 +1,4 @@
 function codeview() {
-    console.log("Category opened: " + model.page);
     document.getElementById('content').innerHTML = `
     <div id="banner">
     <div id="panel">
