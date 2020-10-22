@@ -1,4 +1,4 @@
 const model = {
-    page: '',
-    mode: '',
+    page: 'startview', //'artview'/'threedview'/'animationview'/'codeview'/'contactview'
+    mode: 'day',
 };

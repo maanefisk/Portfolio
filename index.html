@@ -7,68 +7,29 @@
     <link id="nightmode" rel="stylesheet" href="nightmode.css" />
     <link id="daymode" rel="stylesheet" href="daymode.css" />
     <script src="model.js"></script>
+    <script src="startview.js"></script>
+    <script src="artview.js"></script>
+    <script src="threedview.js"></script>
+    <script src="animationview.js"></script>
+    <script src="codeview.js"></script>
+    <script src="contactview.js"></script>
+    <script src="controller.js"></script>
+    <script src="themode.js"></script>
     
   </head>
   <body>
-    <div id="banner">
-      <div id="panel">
-        <div id="icon" class="art" onmouseover="generateColorOnHover(this)" onmouseout="backToColor(this)">Art</div>
-        <div id="icon" class="threed" onmouseover="generateColorOnHover(this)" onmouseout="backToColor(this)">3D</div>
-        <div id="icon" class="animation" onmouseover="generateColorOnHover(this)" onmouseout="backToColor(this)">Animation</div>
-        <div id="icon" class="code" onmouseover="generateColorOnHover(this)" onmouseout="backToColor(this)">Code</div>
-        <div id="icon" class="contact" onmouseover="generateColorOnHover(this)" onmouseout="backToColor(this)">Contact</div>
-      </div>
-    </div>
-    
-    <div id="contentbox">
-
-    </div>
-    <div id="nightmodebutton" onclick="switchmode('/nightmode.css')">Nightmode</div>
-    <div id="daymodebutton" onclick="switchmode('daymode.css')">Daymode</div>
-
+    <div class="content" id="content"></div>
     <script>
-    var daymodeB = document.getElementById('daymodebutton');
-    var nightmodeB = document.getElementById('nightmodebutton');
-    var BGimg = document.getElementById('BGimg');
-    var icon = document.getElementById('icon');
-    var originalColor = "";
-    var counter=0;
-
-    function backToColor(theIcon) {theIcon.style.color = originalColor;}
-
-      function switchmode(sheet) {
-        document.getElementById('daymode').setAttribute('href',sheet);
-        
-        if (sheet == '/nightmode.css') {
-          let originalColor = 'white';
-          icon.style.color = originalColor;
-          nightmodeB.style.display = "none";
-          daymodeB.style.display = "block";
-          } 
-          else {
-            let originalColor = 'black';
-            icon.style.color = originalColor;
-            nightmodeB.style.display = "block"; 
-            daymodeB.style.display = "none";}
-      }
-
-      function generateColorOnHover(onIcon) {
-        var classes = new Array("rgb(247, 254, 255)", "rgb(247, 255, 252)", "rgb(247, 252, 255)", "rgb(249, 247, 255)", "rgb(253, 247, 255)");
-        if (counter<=3) counter++; else counter=0;
-        onIcon.style.color = classes[counter];
-      }
-
-      
-      // function getaRandomColor()
-      // {
-      //   //Store available css classes
-      //   var classes = new Array("green", "white", "blue", "yellowgreen", "pink");
-       
-      //   //Get a random number from 0 to 4
-      //   // var randomNumber = Math.floor(Math.random()*5);
-
-      //     return classes[randomNumber];
-      // }
+      updateView();
+        function updateView() {
+            if (model.page == 'startview') startview();
+            if (model.page == 'art') artview();
+            if (model.page == 'threed') threedview();
+            if (model.page == 'animation') animationview();
+            if (model.page == 'code') codeview();
+            if (model.page == 'contact') contactview();
+            if (model.mode == 'day'||'night') themode();
+        }
 
       
     

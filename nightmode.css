@@ -33,14 +33,12 @@ body {
   transform: rotate(-5deg);
 }
 
-#icon {
-  align-self: center;
-  font-size: 3vw;
-  color: black;
-  transition: 0.4s;
-  height: 3.5vw;
-  margin-bottom: 62vh;
-  transform: rotate(5deg);
+#stuffing {
+  position: fixed;
+  top: 40vh;
+  left: 20vw;
+  z-index: 4;
+  font-size: 100px;
 }
 
 #contentbox {
@@ -53,7 +51,17 @@ body {
   z-index: -1;
   left: 0%;
   bottom: 0%;
-  transition: 1s ease-in;
+  transition: 0.5s ease-in;
+}
+
+#icon {
+  align-self: center;
+  font-size: 3vw;
+  color: black;
+  transition: 0.4s;
+  height: 3.5vw;
+  margin-bottom: 61vh;
+  transform: rotate(5deg);
 }
 
 #icon:hover {
@@ -68,7 +76,7 @@ body {
   animation-timing-function: ease-in-out;
 }
 
-@-webkit-keyframes wobble {
+@keyframes wobble {
   16.65% {
     -webkit-transform: translateY(8px);
     transform: translateY(8px);
@@ -105,12 +113,12 @@ body {
   display: block;
 }
 
-#daymodebutton:hover {
+#nightmodebutton:hover {
   color: rgb(0, 195, 255);
 }
 
 #daymodebutton {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-size: 1vw;
   position: absolute;
   right: 10px;
