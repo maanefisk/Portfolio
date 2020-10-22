@@ -1,5 +1,6 @@
 function animationview() {
     document.getElementById('content').innerHTML = `
+    <div onclick="changepage(this)" id="icon" class="home">⌂</div>
     <div id="banner">
     <div id="panel">
       <div onclick="changepage(this)" id="icon" class="art" onmouseover="generateColorOnHover(this)" onmouseout="backToColor(this)">Art</div>

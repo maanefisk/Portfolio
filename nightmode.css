@@ -132,6 +132,13 @@ body {
   color: rgb(0, 195, 255);
 }
 
+.home {
+  position: absolute;
+  top: 1vh;
+  left: 5vh;
+  z-index: 3;
+}
+
 @font-face {
   font-family: Morn;
   src: url("Morn-Thin.otf");
