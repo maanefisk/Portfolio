@@ -14,7 +14,8 @@
     <script src="codeview.js"></script>
     <script src="contactview.js"></script>
     <script src="controller.js"></script>
-    <script src="themode.js"></script>
+    <script src="daytime.js"></script>
+    <script src="nighttime.js"></script>
     
   </head>
   <body>
@@ -28,7 +29,8 @@
             if (model.page == 'animation') animationview();
             if (model.page == 'code') codeview();
             if (model.page == 'contact') contactview();
-            if (model.mode == 'day'||'night') themode();
+            if (model.mode == 'day') daytime();
+            if (model.mode == 'night') nighttime();
         }
 
       

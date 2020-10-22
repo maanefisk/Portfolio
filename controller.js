@@ -13,6 +13,8 @@ function changepage(theclicked) {
 function changemode(theelement) {
     var dayornight = theelement.getAttribute("class");
     model.page = dayornight;
+    console.log(dayornight);
+    console.log(model.page);
     updateView();
 }
 
