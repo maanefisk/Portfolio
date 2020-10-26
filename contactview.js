@@ -11,9 +11,18 @@ function contactview() {
     </div>
   </div>
   
-  <div id="contentbox">
-  <div id="stuffing">CONTACT </div>
+  <div id="contentbox"></div>
+
+  <div id="stuffing">
+    <div id="contact" class="contacttext">
+          Charlotte Aimée Bugge <br> 
+          <br>
+          charlottebugge3d@gmail.com <br>
+    </div>
+
+    <img id="contact" src="/works/Contact_photo.png"/>
   </div>
+  
   <div class="night" id="nightmodebutton" onclick="changemode(this)">Nightmode</div>
   <div class="day" id="daymodebutton" onclick="changemode(this)">Daymode</div>
 
