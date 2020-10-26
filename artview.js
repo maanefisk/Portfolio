@@ -11,9 +11,23 @@ function artview() {
     </div>
   </div>
   
-  <div id="contentbox">
-  <div id="stuffing">ART ART ART ART</div>
+  <div id="contentbox"></div>
+  
+  <div id="stuffing2">
+    <img id="artwork" onclick="preview(this)" src="/works/IdreamtIdweltinmarbleHalls.jpg"/
+    <img id="artwork" onclick="preview(this)" src="/works/5.png"/>
+    <img id="artwork" onclick="preview(this)" src="/works/yingyang.png"/>
+    <img id="artwork" onclick="preview(this)" src="/works/inthecontrolpanel.jpg"/>
+    <img id="artwork" onclick="preview(this)" src="/works/Ilder.png"/>
+    <img id="artwork" onclick="preview(this)" src="/works/Woodspirit.png"/>
+    <img id="artwork" onclick="preview(this)" src="/works/Spirit.png"/>
+    <img id="artwork" onclick="preview(this)" src="/works/Ondagrindstone.jpg"/>
+    <img id="artwork" onclick="preview(this)" src="/works/drage2.png"/>
+    <img id="artwork" onclick="preview(this)" src="/works/Robogurl.jpg"/>
+    <img id="artwork" onclick="preview(this)" src="/works/sensei.jpg"/>
+    <img id="artwork" onclick="preview(this)" src="/works/frekvensian.jpg"/>
   </div>
+  <div id="previewbox"><div id="x">X</div></div>
   <div class="night" id="nightmodebutton" onclick="changemode(this)">Nightmode</div>
   <div class="day" id="daymodebutton" onclick="changemode(this)">Daymode</div>
 

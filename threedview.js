@@ -11,9 +11,17 @@ function threedview() {
     </div>
   </div>
   
-  <div id="contentbox">
-  <div id="stuffing">3D 3D 3D</div>
+  <div id="contentbox"></div>
+
+  <div id="stuffing">
+    <img id="artwork" src="/works/ForeverDolphinLove.png"/>
+    <img id="artwork" src="/works/Diorama_Poster2.png"/>
+    <img id="artwork" src="/works/Equinox_Talisman.png"/>
+    
+    <img id="artwork" src="/works/Prikkperikum.png"/>
+    <img id="artwork" src="/works/Skull.png"/>
   </div>
+
   <div class="night" id="nightmodebutton" onclick="changemode(this)">Nightmode</div>
   <div class="day" id="daymodebutton" onclick="changemode(this)">Daymode</div>
 

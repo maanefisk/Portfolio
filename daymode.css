@@ -36,7 +36,7 @@ body {
 }
 
 #stuffing {
-  border: solid red 5px;
+  border: solid transparent 5px;
   height: 59%;
   width: 70%;
   color: black;
@@ -48,6 +48,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 #contentbox {
@@ -158,4 +159,72 @@ body {
 .contacttext {
   align-self: center;
   font-size: 1em;
+}
+
+/* Artpage */
+
+#artwork {
+  object-fit: cover;
+  height: 25%;
+  width: 33%;
+  flex-grow: 8;
+}
+
+#artwork:hover {
+  cursor: pointer;
+  animation: grow 2s infinite;
+}
+
+#stuffing2 {
+  height: 59%;
+  width: 68%;
+  color: black;
+  position: fixed;
+  top: 40vh;
+  left: 25vw;
+  z-index: 4;
+  font-size: 2.5vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#previewbox {
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  left: 15%;
+  z-index: 5;
+  height: 100%;
+  width: 70%;
+  background-color: black;
+  opacity: 0.5;
+  display: block;
+}
+
+#x {
+  position: relative;
+  color: white;
+  font-size: 30px;
+  padding: 2vh;
+  cursor: pointer;
+  left: 93%;
+  height: 31px;
+  width: 31px;
+  text-align: center;
+  border: solid white 1px;
+  border-radius: 30px;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+    border-radius: 10px;
+  }
+  to {
+    transform: scale(1);
+  }
 }

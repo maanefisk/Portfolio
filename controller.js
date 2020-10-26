@@ -34,6 +34,13 @@ function generateColorOnHover(onIcon) {
   onIcon.style.color = classes[counter];
 }
 
+function preview(theimg) {
+    let previewbox = document.getElementById('previewbox');
+    let x = document.getElementById('x');
+    previewbox.innerHTML = theimg;
+    
+}
+
 // function getaRandomColor()
       // {
       //   //Store available css classes
