@@ -193,27 +193,30 @@ body {
   position: absolute;
   border-radius: 10px;
   top: 0;
-  left: 15%;
+  left: 4%;
   z-index: 5;
   height: 100%;
-  width: 70%;
+  width: 92%;
   background-color: black;
   opacity: 0.5;
-  display: block;
+  display: none;
+  color: white;
 }
 
 #x {
-  position: relative;
+  position: absolute;
+  z-index: 6;
+  cursor: pointer;
   color: white;
   font-size: 30px;
-  padding: 2vh;
-  cursor: pointer;
-  left: 93%;
-  height: 31px;
-  width: 31px;
-  text-align: center;
-  border: solid white 1px;
-  border-radius: 30px;
+  top: 1%;
+  right: 7%;
+  display: none;
+}
+
+#previewimg {
+  position: absolute;
+  z-index: 6;
 }
 
 @keyframes grow {

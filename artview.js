@@ -27,7 +27,8 @@ function artview() {
     <img id="artwork" onclick="preview(this)" src="/works/sensei.jpg"/>
     <img id="artwork" onclick="preview(this)" src="/works/frekvensian.jpg"/>
   </div>
-  <div id="previewbox"><div id="x">X</div></div>
+  <div id="previewbox"></div>
+  <div id="x" onclick="closepreview()">⨉</div>
   <div class="night" id="nightmodebutton" onclick="changemode(this)">Nightmode</div>
   <div class="day" id="daymodebutton" onclick="changemode(this)">Daymode</div>
 

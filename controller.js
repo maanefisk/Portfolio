@@ -37,8 +37,18 @@ function generateColorOnHover(onIcon) {
 function preview(theimg) {
     let previewbox = document.getElementById('previewbox');
     let x = document.getElementById('x');
-    previewbox.innerHTML = theimg;
-    
+    let chosenimg = theimg.getAttribute("src");
+    previewbox.style.display="block";
+    x.style.display="block";
+    previewbox.innerHTML += "<img id=\"previewimg\" src=\"" + chosenimg + "\"/>";
+}
+
+function closepreview() {
+    let previewbox = document.getElementById('previewbox');
+    let x = document.getElementById('x');
+    previewbox.style.display="none";
+    x.style.display="none";
+    previewbox.innerHTML = "";
 }
 
 // function getaRandomColor()
